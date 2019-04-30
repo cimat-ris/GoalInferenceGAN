@@ -3,8 +3,8 @@ from . import helpers
 import sys
 import os
 import numpy as np
-sys.path.append(os.path.abspath('../sgan'))
-# TODO: Importing sgan shouldn't be like this, but SGAN needs to become an installable python package
+
+import sgan.utils
 
 def get_hmm():
     """Get a thought."""
