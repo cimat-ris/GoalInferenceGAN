@@ -6,4 +6,4 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 import gigan
 
-sys.path.append(os.path.abspath('../sgan'))
+sys.path.append(os.path.abspath('../../sgan'))

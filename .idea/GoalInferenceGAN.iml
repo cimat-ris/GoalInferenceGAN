@@ -6,6 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/practice" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../IntentionInference">
+      <sourceFolder url="file://$MODULE_DIR$/../IntentionInference/GoalInference" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/../sgan">
       <sourceFolder url="file://$MODULE_DIR$/../sgan/sgan" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../sgan/scripts" isTestSource="false" />

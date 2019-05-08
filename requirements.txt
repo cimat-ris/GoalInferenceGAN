@@ -2,3 +2,8 @@ numpy
 torch
 torchvision
 keras
+pandas
+scipy
+networkx
+pgmpy
+wrapt

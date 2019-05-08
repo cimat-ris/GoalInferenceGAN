@@ -3,11 +3,8 @@ from typing import Any, Callable, Union, List
 import numpy as np
 import scipy
 import scipy.stats
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 from gigan.core import metropolis_hastings
-
-# matplotlib inline
 
 # --------------------------------------------------------------------------------
 # STEP 1: DATA GENERATION
@@ -28,8 +25,7 @@ ax = fig.add_subplot(1, 1, 1)
 ax.hist(observation, bins=35, )
 ax.set_xlabel("Value")
 ax.set_ylabel("Frequency")
-ax.set_title(
-    "Figure 1: Distribution of 1000 observations sampled from a population of 30,000 with $\mu$=10, $\sigma$=3")
+ax.set_title("Figure 1: Distribution of 1000 observations sampled from population of 30,000 with $\mu$=10, $\sigma$=3")
 fig.show()
 mu_obs = observation.mean()
 print(mu_obs)
