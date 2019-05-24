@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from . import helpers
-import sys
-import os
 import numpy as np
+from pgmpy.models import BayesianModel
+from gigan.extensions.pgmpy import RandomChoice
 
 import sgan.utils
 
@@ -51,7 +51,7 @@ def metropolis_hastings(likelihood_computer, prior, transition_model, param_init
     return np.array(accepted), np.array(rejected)
 
 
-def cascading_resimulation_mh(graph_model, likelihood_computer, prior, transition_model, param_init, iterations, data, acceptance_rule):
+def cascading_resimulation_mh(graph_model: BayesianModel, iterations: int, data, acceptance_rule):
     """
         Cusumano's Goal Inference (2017) presented a Cascading Resimulation Metropolis-Hastings strategy.
         TODO: change description
@@ -59,8 +59,8 @@ def cascading_resimulation_mh(graph_model, likelihood_computer, prior, transitio
         to new positions based on how likely the sample is. This “memory-less” random walk is the “Markov Chain” part of
         MCMC, which is a type of algorithm for sampling from a probability distribution and can be used to estimate the
         distribution of parameters given a set of observations.
-        The likelihood of each new sample is decided by a function f() that must be proportional to the posterior we want to
-        sample from. f is commonly chosen to be a probability function that expresses this proportionality.
+        The likelihood of each new sample is decided by a function f() that must be proportional to the posterior we
+        want to sample from. f is commonly chosen to be a probability function that expresses this proportionality.
 
         :param graph_model: Bayesian graphical model as a Pgmpy object.
         :param likelihood_computer: P(Y|X) returns the likelihood that these parameters generated the data Y
@@ -75,26 +75,28 @@ def cascading_resimulation_mh(graph_model, likelihood_computer, prior, transitio
         """
     accepted = []
     rejected = []
-    F = []
-    z = param_init
+    G = graph_model
+    root_nodes = G.get_roots()
+    ith_node: RandomChoice = root_nodes[0]
     for i in range(iterations):
         # 1 propose a new value for choice i
-        z_new = transition_model(z)
+        z = ith_node.samples[ith_node.samples.count() - 1]
+        z_new = ith_node.transition_model(z)
         # 2 Initially, no change to other choices
         # z'_I\i <-- z_I\i
         # 3 Unnormalized target density for previous values
-        z_lik = likelihood_computer(z, data)  # P(Y|X_i)
+        z_lik = ith_node.likelihood(z, data)  # P(Y|X_i)
         # 4 Unnormalized target density for proposed values
-        z_new_lik = likelihood_computer(z_new, data)  # P(Y|X_{i+1})
+        z_new_lik = ith_node.likelihood(z_new, data)  # P(Y|X_{i+1})
         # 5 Ask for likelihoods from j \in B
-        B = []
+        B = [ith_node, G.get_children(ith_node)]
         # 6 Likelihood-free cascade participants
         H = []
         # 7 Visited choices with tracktable likelihoods
-        A = []
+        A = [ith_node]
         while len(B) > 0:
-            j = B   # Pop in topological order
-            if j in F:  # Choice j is likelihood-free
+            jth_node = B.pop()   # Pop in topological order
+            if jth_node.likelihood is None:  # Choice j is likelihood-free
                 # Propose from prior
                 # z'_j ~ prior(*;f_j(z_p))
                 # Ask for child likelihoods
