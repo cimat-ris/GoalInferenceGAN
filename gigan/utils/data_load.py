@@ -3,6 +3,9 @@ import random
 import numpy as np
 
 
+
+
+
 def mil_to_pixels(directory=["./data/ewap_dataset/seq_hotel"]):
     '''
     Preprocess the frames from the datasets.
@@ -10,6 +13,7 @@ def mil_to_pixels(directory=["./data/ewap_dataset/seq_hotel"]):
     obtain and store all frames data the actually used frames (as some are skipped),
     the ids of all pedestrians that are present at each of those frames and the sufficient statistics.
     '''
+
     def collect_stats(agents):
         x_pos = []
         y_pos = []
@@ -57,6 +61,7 @@ def parse_annotations(Hinv, obsmat_txt):
              peds_in_frame (maps timestep -> ped IDs),
              peds (maps ped ID -> (t,x,y,z) path)
     """
+
     def to_image_frame(loc):
         """
         Given H^-1 and (x, y, z) in world coordinates,

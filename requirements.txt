@@ -1,10 +1,13 @@
+matplotlib
 numpy
 torch
 torchvision
 keras
 pandas
 scipy
-networkx
-pgmpy
+networkx==2.3
+# Install by following instructions from dev branch https://github.com/pgmpy/pgmpy/tree/dev
+# because non-dev will conflict with networkx 2.X
+pgmpy==0.1.7
 wrapt
 opencv-python
