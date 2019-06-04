@@ -8,6 +8,7 @@ from scipy.stats import uniform
 from gigan.utils import data_load
 from gigan.visualization import video
 from gigan.extensions.pgmpy import RandomChoice
+from gigan.extensions.sgan import get_eth_gan_generator, sample_generator
 from gigan.core import cascading_resimulation_mh
 
 
@@ -82,6 +83,9 @@ noisy_path_node.likelihood = noisy_path_likelihood
 # TODO: callable to GAN sampler.
 #  Start, World and Goal affect path non-explicitly, as they are passed as arguments to a path generator.
 #  In this case RRT was used by Cusumano https://arxiv.org/abs/1704.04977
+generator = get_eth_gan_generator()
+obs_traj = None
+sample_generator(generator, obs_traj)
 path_node.transition_model = None
 
 # INITIAL OBSERVATIONS
@@ -110,6 +114,7 @@ print("Parents of 'noisy_path': %s" % cusumano_model.get_parents(noisy_path_node
 nx.draw_networkx(cusumano_model, arrowsize=15, node_size=800, node_color='#90b9f9')
 plt.show()
 
+
 # Defines whether to accept or reject the new sample
 def acceptance(x, x_new):
     if x_new > x:
@@ -124,8 +129,7 @@ def acceptance(x, x_new):
 # ----------------------------------------------------------------------------------------------------------------------
 # Solve and prepare/analyze results
 # ----------------------------------------------------------------------------------------------------------------------
-if False:
-    cascading_resimulation_mh(cusumano_model, iterations, data, acceptance)
+cascading_resimulation_mh(cusumano_model, iterations, data, acceptance)
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -170,5 +174,5 @@ def draw_etz(frame_id: int, frame: object):
 
 
 if visualization:
-    video.video_player(vc, visualization, frame_title, skip_frames, draw_etz)
+    video.video_player(vc, frame_title, skip_frames, draw_etz)
 video.video_close(vc)
