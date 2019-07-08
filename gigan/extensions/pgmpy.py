@@ -9,8 +9,7 @@ class RandomChoice:
     def __init__(self, name) -> None:
         self.name = name
         self.likelihood = None
-        self.proposed_model = None
-        self.transition_model = None
+        self.transition = None
         self.samples = []
         self.observed = None
 

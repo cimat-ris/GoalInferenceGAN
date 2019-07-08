@@ -5,7 +5,7 @@
       <entry url="file://$PROJECT_DIR$/../sgan">
         <entryData>
           <resourceRoots>
-            <path value="file://$PROJECT_DIR$/../sgan/scripts/datasets" />
+            <path value="file://$PROJECT_DIR$/../sgan/datasets/datasets" />
             <path value="file://$PROJECT_DIR$/../sgan/models" />
             <path value="file://$PROJECT_DIR$/../sgan/images" />
           </resourceRoots>

@@ -67,26 +67,25 @@ goal_node = RandomChoice(name="goal")
 path_node = RandomChoice(name="path")
 noisy_path_node = RandomChoice(name="noisy_path")
 
-# PROPOSAL DISTRIBUTIONS
-start_node.proposed_pdf = uniform_pdf
-goal_node.proposed_pdf = uniform_pdf
-path_node.proposed_pdf = None
-noisy_path_node.proposed_pdf = None
-
 # HOW DO THEY COMPUTE LIKELIHOOD (TRACTABLE)
-start_node.likelihood = None
-goal_node.likelihood = None
+start_node.likelihood = uniform_pdf
+goal_node.likelihood = uniform_pdf
 path_node.likelihood = None
 noisy_path_node.likelihood = noisy_path_likelihood
 
-# LIKELIHOOD-FREE (NOT TRACTABLE)
+# HOW DO THEY RANDOM WALK (PROPOSAL DISTRIBUTIONS)
+start_node.transition = uniform_pdf
+goal_node.transition = uniform_pdf
+
 # TODO: callable to GAN sampler.
 #  Start, World and Goal affect path non-explicitly, as they are passed as arguments to a path generator.
 #  In this case RRT was used by Cusumano https://arxiv.org/abs/1704.04977
-generator = get_eth_gan_generator()
+# generator = get_eth_gan_generator()
 obs_traj = None
-sample_generator(generator, obs_traj)
-path_node.transition_model = None
+# sample_generator(generator, obs_traj)
+path_node.transition = None
+
+noisy_path_node.transition = None
 
 # INITIAL OBSERVATIONS
 start_node.samples = []
