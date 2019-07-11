@@ -19,7 +19,7 @@ goal = (0.5, 0.5)
 # map
 start = (0.1, 0.1)
 iterations = 10000
-visualization = False
+visualization = True
 t_curr = 0
 #sequence_path = "./datasets/ewap_dataset_full/ewap_dataset/seq_eth/"
 # video_file = sequence_path + "seq_eth.avi"
@@ -67,6 +67,18 @@ goal_node = RandomChoice(name="goal")
 path_node = RandomChoice(name="path")
 noisy_path_node = RandomChoice(name="noisy_path")
 
+# EVIDENCES
+start_node.observed = True
+goal_node.observed = False
+path_node.observed = False
+noisy_path_node.observed = True
+
+# INITIAL OBSERVATIONS
+start_node.samples = []  # To be set when playing video
+goal_node.samples = []  # To be set when playing video
+path_node.samples = []  # To be set when playing video
+noisy_path_node.samples = []  # To be set when playing video
+
 # HOW DO THEY COMPUTE LIKELIHOOD (TRACTABLE)
 start_node.likelihood = uniform_pdf
 goal_node.likelihood = uniform_pdf
@@ -84,14 +96,7 @@ goal_node.transition = uniform_pdf
 obs_traj = None
 # sample_generator(generator, obs_traj)
 path_node.transition = None
-
 noisy_path_node.transition = None
-
-# INITIAL OBSERVATIONS
-start_node.samples = []
-goal_node.samples = []
-path_node.samples = []
-noisy_path_node.samples = []
 
 # CREATING BAYESIAN MODEL (GRAPH)
 cusumano_model = BayesianModel([
@@ -113,7 +118,6 @@ print("Parents of 'noisy_path': %s" % cusumano_model.get_parents(noisy_path_node
 nx.draw_networkx(cusumano_model, arrowsize=15, node_size=800, node_color='#90b9f9')
 plt.show()
 
-
 # Defines whether to accept or reject the new sample
 def acceptance(x, x_new):
     if x_new > x:
@@ -123,12 +127,6 @@ def acceptance(x, x_new):
         # Since we did a log likelihood, we need to exponentiate in order to compare to the random number
         # less likely x_new are less likely to be accepted
         return accept < (np.exp(x_new - x))
-
-
-# ----------------------------------------------------------------------------------------------------------------------
-# Solve and prepare/analyze results
-# ----------------------------------------------------------------------------------------------------------------------
-cascading_resimulation_mh(cusumano_model, iterations, data, acceptance)
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -156,6 +154,7 @@ def draw_etz(frame_id: int, frame: object):
                 prev = truth[0]
                 p_curr = 0
                 for curr in truth[1:]:
+                    # Drawings
                     loc1 = (int(prev[1]), int(prev[0]))  # (y, x)
                     loc2 = (int(curr[1]), int(curr[0]))  # (y, x)
                     p1, p2 = video.crossline(curr, prev, 3)
@@ -166,8 +165,24 @@ def draw_etz(frame_id: int, frame: object):
                         video.draw_text(frame, (int(prev[1]), int(prev[0])), str(i))
                     cv2.line(frame, p1, p2, color_crossline, 1, cv2.LINE_AA)  # crossline
                     cv2.line(frame, loc1, loc2, color_line, 1, cv2.LINE_AA)
+                    # --------------------------------------------------------------------------------------------------
+                    # INFERENCE
+                    # --------------------------------------------------------------------------------------------------
+                    # Reset samples
+                    global cusumano_model, start_node, goal_node, path_node, noisy_path_node
+                    start_node.samples.clear()
+                    start_node.samples.append((0,2))
+                    goal_node.samples.clear()
+                    path_node.samples.clear()
+                    noisy_path_node.samples.clear()
+                    noisy_path_node.samples.append(truth)
+                    if len(truth) > 3:
+                        cascading_resimulation_mh(cusumano_model, iterations, data, acceptance)
+                    # --------------------------------------------------------------------------------------------------
+                    # Loop control
                     prev = curr
                     p_curr = p_curr + 1
+
         if frame_id == recorded_frames[t_curr + 1]:
             t_curr = t_curr + 1
 

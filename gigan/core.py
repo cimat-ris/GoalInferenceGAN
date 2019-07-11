@@ -88,10 +88,12 @@ def cascading_resimulation_mh(graph_model: BayesianModel, iterations: int, data,
     rejected = []
     G = graph_model
     root_nodes = G.get_roots()
-    # TODO: discard all root nodes that are evidence. In the example it should be goal.
+    root_nodes = [x for x in root_nodes if not x.observed and x.likelihood is not None ]
     ith_node: RandomChoice = root_nodes[0]
     for i in range(iterations):
         # 1 propose a new value for choice i
+        # TODO: implement function to retrieve transition parameters according to parent past samples
+        #   corresponding to f_{t_i}(Z_{\pi_G(i)}) in Cusumano's paper
         z_new = ith_node.transition()
         # 2 Initially, no change to other choices
         # z'_I\i <-- z_I\i

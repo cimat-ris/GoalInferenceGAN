@@ -10,6 +10,7 @@ class RandomChoice:
         self.name = name
         self.likelihood = None
         self.transition = None
+        self.transition_params = None
         self.samples = []
         self.observed = None
 
@@ -17,10 +18,10 @@ class RandomChoice:
         return hash(self.name)
 
     def __str__(self) -> str:
-        return "[ %s ]" % self.name
+        return "%s" % self.name
 
     def __repr__(self) -> str:
-        return "[ %s ]" % self.name
+        return "%s" % self.name
 
     def __eq__(self, o) -> bool:
         return self.__class__ == o.__class__ and self.name == o.name
