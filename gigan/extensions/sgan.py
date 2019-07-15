@@ -5,6 +5,7 @@ from sgan.utils import relative_to_abs, get_dset_path
 from sgan.losses import displacement_error, final_displacement_error
 from sgan.data.loader import data_loader
 
+torch_mode = "CUDA"
 
 def get_generator(checkpoint):
     args = AttrDict(checkpoint['args'])
@@ -27,7 +28,10 @@ def get_generator(checkpoint):
         grid_size=args.grid_size,
         batch_norm=args.batch_norm)
     generator.load_state_dict(checkpoint['g_state'])
-    generator.cuda()
+    if torch_mode == "CUDA":
+        generator.cuda()
+    elif torch_mode == "CPU":
+        generator.cpu()
     generator.train()
     return generator
 
@@ -37,7 +41,10 @@ def evaluate(args, loader, generator, num_samples):
     total_traj = 0
     with torch.no_grad():
         for batch in loader:
-            batch = [tensor.cuda() for tensor in batch]
+            if torch_mode == "CUDA":
+                batch = [tensor.cuda() for tensor in batch]
+            elif torch_mode == "CPU":
+                batch = [tensor.cpu() for tensor in batch]
             (obs_traj, pred_traj_gt, obs_traj_rel, pred_traj_gt_rel,
              non_linear_ped, loss_mask, seq_start_end) = batch
 
@@ -82,13 +89,18 @@ def evaluate_helper(error, seq_start_end):
     return sum_
 
 
-def get_eth_gan_generator():
+def get_eth_gan_generator(load_mode="CUDA"):
     """
 
     :return:
     """
     model_path = "../../sgan/models/sgan-models/eth_12_model.pt"
-    checkpoint = torch.load(model_path)
+    if load_mode == "CUDA":
+        checkpoint = torch.load(model_path)
+    if load_mode == "CPU":
+        checkpoint = torch.load(model_path, map_location=lambda storage, loc: storage)
+    global torch_mode
+    torch_mode = load_mode
     generator = get_generator(checkpoint)
     _args = AttrDict(checkpoint['args'])
     path = get_dset_path(_args.dataset_name, 'test')

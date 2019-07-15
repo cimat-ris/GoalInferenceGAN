@@ -50,8 +50,16 @@ data = []  # load from dataset
 # ----------------------------------------------------------------------------------------------------------------------
 # Preparation and Definitions needed for the solution
 # ----------------------------------------------------------------------------------------------------------------------
-def uniform_pdf(u, v):
-    return uniform.pdf(x=[u, v], loc=(0,0), scale=(width, height))
+# Likelihood for goal and start positions. This evaluates how likely is
+# (u, v) coordinate. Here I model the goal and the start to be a polar
+# coordinate. \theta \in (0, 2\pi), discrete space of 360*4.
+def uniform_pdf(theta):
+    # All angles are equally probable, rendering a likelihood of 0.0006944444444444445
+    return uniform.pdf(x=theta, loc=0, scale=1440)
+
+
+def uniform_sample():
+    return uniform.rvs(size=1, loc=0, scale=1440)
 
 
 def noisy_path_likelihood():
@@ -86,13 +94,13 @@ path_node.likelihood = None
 noisy_path_node.likelihood = noisy_path_likelihood
 
 # HOW DO THEY RANDOM WALK (PROPOSAL DISTRIBUTIONS)
-start_node.transition = uniform_pdf
-goal_node.transition = uniform_pdf
+start_node.transition = uniform_sample
+goal_node.transition = uniform_sample
 
 # TODO: callable to GAN sampler.
 #  Start, World and Goal affect path non-explicitly, as they are passed as arguments to a path generator.
 #  In this case RRT was used by Cusumano https://arxiv.org/abs/1704.04977
-# generator = get_eth_gan_generator()
+generator = get_eth_gan_generator(load_mode="CPU")
 obs_traj = None
 # sample_generator(generator, obs_traj)
 path_node.transition = None
