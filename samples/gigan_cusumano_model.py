@@ -3,8 +3,9 @@ import math
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
+import gigan.utils.geometry as geom
 from pgmpy.models import BayesianModel
-from scipy.stats import uniform
+from scipy.stats import uniform, randint
 from gigan.utils import data_load
 from gigan.visualization import video
 from gigan.extensions.pgmpy import RandomChoice
@@ -59,10 +60,13 @@ def uniform_pdf(theta):
 
 
 def uniform_sample():
-    return uniform.rvs(size=1, loc=0, scale=1440)
+    # An angle represented as four times the 360 degrees. Hence 1440 possible values
+    # When using it as radians do [ uniform_sample() * math.pi / 180 * 4 ]
+    # If evaluating likelihood use as is.
+    return randint.rvs(low=0, high=1439, size=1)
 
 
-def noisy_path_likelihood():
+def noisy_path_likelihood(): # noisy_path: Trajectory, path: Trajectory):
     val = 0
     likelihood = math.exp(-0.5)
     return likelihood
@@ -96,6 +100,11 @@ noisy_path_node.likelihood = noisy_path_likelihood
 # HOW DO THEY RANDOM WALK (PROPOSAL DISTRIBUTIONS)
 start_node.transition = uniform_sample
 goal_node.transition = uniform_sample
+
+# TESTING FUNCTIONS
+theta = uniform_sample()  # sample a goal or a start
+print(theta)
+print(uniform_pdf(theta)) # likelihood of sampled goal or start
 
 # TODO: callable to GAN sampler.
 #  Start, World and Goal affect path non-explicitly, as they are passed as arguments to a path generator.
@@ -162,7 +171,33 @@ def draw_etz(frame_id: int, frame: object):
                 prev = truth[0]
                 p_curr = 0
                 for curr in truth[1:]:
-                    # Drawings
+                    # --------------------------------------------------------------------------------------------------
+                    # INFERENCE
+                    # --------------------------------------------------------------------------------------------------
+                    # Reset samples
+                    global cusumano_model, start_node, goal_node, path_node, noisy_path_node
+                    start_node.samples.clear()
+                    start_node.samples.append(uniform_sample() * math.pi / (180 * 4))
+                    goal_node.samples.clear()
+                    goal_node.samples.append(uniform_sample() * math.pi / (180 * 4))
+                    path_node.samples.clear()
+                    noisy_path_node.samples.clear()
+                    noisy_path_node.samples.append(truth)
+                    #if len(truth) > 3:
+                    #    cascading_resimulation_mh(cusumano_model, iterations, data, acceptance)
+                    # --------------------------------------------------------------------------------------------------
+                    # DRAWINGS
+                    # --------------------------------------------------------------------------------------------------
+                    # Draw person start
+                    pixel = geom.angle_to_pixel(start_node.samples[0], width, height)
+                    cv2.circle(frame, (int(pixel[0]), int(pixel[1])), 5, (0, 0, 255), -1)
+                    # Draw person inferred goals
+                    # TODO: loop on all goals in the samples vector
+                    pixel = geom.angle_to_pixel(goal_node.samples[0], width, height)
+                    cv2.circle(frame, (int(pixel[0]), int(pixel[1])), 5, (0, 0, 255), -1)
+                    # Draw person generated paths (from SGAN)
+
+                    # Draw person noisy path
                     loc1 = (int(prev[1]), int(prev[0]))  # (y, x)
                     loc2 = (int(curr[1]), int(curr[0]))  # (y, x)
                     p1, p2 = video.crossline(curr, prev, 3)
@@ -173,19 +208,6 @@ def draw_etz(frame_id: int, frame: object):
                         video.draw_text(frame, (int(prev[1]), int(prev[0])), str(i))
                     cv2.line(frame, p1, p2, color_crossline, 1, cv2.LINE_AA)  # crossline
                     cv2.line(frame, loc1, loc2, color_line, 1, cv2.LINE_AA)
-                    # --------------------------------------------------------------------------------------------------
-                    # INFERENCE
-                    # --------------------------------------------------------------------------------------------------
-                    # Reset samples
-                    global cusumano_model, start_node, goal_node, path_node, noisy_path_node
-                    start_node.samples.clear()
-                    start_node.samples.append((0,2))
-                    goal_node.samples.clear()
-                    path_node.samples.clear()
-                    noisy_path_node.samples.clear()
-                    noisy_path_node.samples.append(truth)
-                    if len(truth) > 3:
-                        cascading_resimulation_mh(cusumano_model, iterations, data, acceptance)
                     # --------------------------------------------------------------------------------------------------
                     # Loop control
                     prev = curr
