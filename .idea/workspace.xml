@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cbf8d6-ca4b-4205-8052-f55c8d85dedb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gigan/utils/geometry.py" beforeDir="false" afterPath="$PROJECT_DIR$/gigan/utils/geometry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/install_dataset.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/install_repositories.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/samples/gigan_cusumano_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/samples/gigan_cusumano_model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,76 +18,6 @@
       <option value="directory" />
     </option>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/samples/gigan_cusumano_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="181" column="83" selection-start-line="181" selection-start-column="83" selection-end-line="181" selection-end-column="83" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gigan/utils/geometry.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gigan/extensions/sgan.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="114" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sgan/sgan/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7560">
-              <caret line="505" selection-start-line="505" selection-end-line="505" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gigan/core.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
-              <folding>
-                <element signature="e#24#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gigan/extensions/pgmpy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -93,160 +25,12 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>output</find>
-      <find>sample</find>
-      <find>transition_model</find>
-      <find>acceptance</find>
-      <find>mod1</find>
-      <find>goal</find>
-      <find>len</find>
-      <find>prior</find>
-      <find>transiti</find>
-      <find>delay</find>
-      <find>u</find>
-      <find>[0][0][</find>
-      <find>frame_title</find>
-      <find>pdf</find>
-      <find>skip_frames</find>
-      <find>recorded_frames</find>
-      <find>t_curr</find>
-      <find>mspf</find>
-      <find>height</find>
-      <find>draw_networkx</find>
-      <find>items</find>
-      <find>cascading_resimulation_mh</find>
-      <find>gan</find>
-      <find>generator</find>
-      <find>5.86</find>
-      <find>forward</find>
-      <find>cusumano_model</find>
-      <find>global</find>
-      <find>obs_traj</find>
-      <find>Trajectory</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/practice/mlp_example.py" />
-        <option value="$PROJECT_DIR$/practice/lstm_textgen.py" />
-        <option value="$PROJECT_DIR$/practice/timeseries_example.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.rst" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/MANIFEST.in" />
-        <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/docs/Makefile" />
-        <option value="$PROJECT_DIR$/docs/conf.py" />
-        <option value="$PROJECT_DIR$/docs/index.rst" />
-        <option value="$PROJECT_DIR$/tests/context.py" />
-        <option value="$PROJECT_DIR$/practice/mh_example.py" />
-        <option value="$PROJECT_DIR$/../IntentionInference/GoalInference/rrtPlanner.py" />
-        <option value="$PROJECT_DIR$/tests/test_sgan.py" />
-        <option value="$PROJECT_DIR$/gigan/data/trajectories.py" />
-        <option value="$PROJECT_DIR$/gigan/helpers.py" />
-        <option value="$PROJECT_DIR$/gigan/utils/__init__.py" />
-        <option value="$PROJECT_DIR$/practice/pgmpy_example.py" />
-        <option value="$PROJECT_DIR$/../sgan/scripts/evaluate_model.py" />
-        <option value="$PROJECT_DIR$/gigan/utils/data_load.py" />
-        <option value="$PROJECT_DIR$/gigan/visualization/video.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/gigan/extensions/pgmpy.py" />
-        <option value="$PROJECT_DIR$/gigan/core.py" />
-        <option value="$PROJECT_DIR$/gigan/extensions/sgan.py" />
-        <option value="$PROJECT_DIR$/../sgan/sgan/models.py" />
-        <option value="$PROJECT_DIR$/gigan/utils/geometry.py" />
-        <option value="$PROJECT_DIR$/samples/gigan_cusumano_model.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="170" />
-    <option name="y" value="119" />
-    <option name="width" value="1026" />
-    <option name="height" value="557" />
-  </component>
+  <component name="ProjectId" id="1P3hD9Y8CFUOg0PsmWWg42eym13" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-            </path>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="GoalInferenceGAN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="GoalInferenceGAN" type="462c0819:PsiDirectoryNode" />
-              <item name="gigan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="GoalInferenceGAN" type="462c0819:PsiDirectoryNode" />
-              <item name="gigan" type="462c0819:PsiDirectoryNode" />
-              <item name="extensions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="GoalInferenceGAN" type="462c0819:PsiDirectoryNode" />
-              <item name="gigan" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="IntentionInference" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="IntentionInference" type="462c0819:PsiDirectoryNode" />
-              <item name="GoalInference" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="sgan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="sgan" type="462c0819:PsiDirectoryNode" />
-              <item name="sgan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoalInferenceGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoalInferenceGAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="sgan" type="462c0819:PsiDirectoryNode" />
-              <item name="sgan" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -254,11 +38,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -334,6 +121,9 @@
       <module name="GoalInferenceGAN" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="/usr/bin/python3.6" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/samples" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -478,7 +268,11 @@
       <workItem from="1563152376366" duration="1604000" />
       <workItem from="1563154195181" duration="96000" />
       <workItem from="1563156797741" duration="6310000" />
-      <workItem from="1563238344235" duration="19419000" />
+      <workItem from="1563238344235" duration="20085000" />
+      <workItem from="1565108586637" duration="2130000" />
+      <workItem from="1566162514126" duration="22000" />
+      <workItem from="1566162595452" duration="759000" />
+      <workItem from="1566163412840" duration="4809000" />
     </task>
     <task id="LOCAL-00001" summary="Stubs for python package design. Mostly boilerplate, still figuring out how best to best import SGAN.">
       <created>1555396112618</created>
@@ -497,9 +291,6 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297978000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -509,38 +300,21 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49931034" visible="true" weight="0.19545455" />
-      <window_info id="Structure" order="1" sideWeight="0.5006896" side_tool="true" weight="0.1307364" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.35667753" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32829374" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924242" weight="0.3029316" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50160086" side_tool="true" weight="0.25366876" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.37296417" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49839914" weight="0.36807817" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.6759494" visible="true" weight="0.3242424" />
-      <window_info anchor="right" id="R Graphics" order="4" sideWeight="0.49753696" weight="0.32954547" />
-      <window_info anchor="right" id="R Packages" order="5" />
-      <window_info anchor="right" x="0" y="0" width="291" height="543" id="Documentation" order="6" sideWeight="0.32405064" side_tool="true" visible="true" weight="0.3242424" />
-      <window_info anchor="right" id="Database" order="7" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
@@ -558,7 +332,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GoalInferenceGAN$pgmpy_example.coverage" NAME="pgmpy_example Coverage Results" MODIFIED="1556902506079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/practice" />
-    <SUITE FILE_PATH="coverage/GoalInferenceGAN$gigan_cusumano_model.coverage" NAME="gigan_cusumano_model Coverage Results" MODIFIED="1563258591302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/samples" />
+    <SUITE FILE_PATH="coverage/GoalInferenceGAN$gigan_cusumano_model.coverage" NAME="gigan_cusumano_model Coverage Results" MODIFIED="1565120486085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/samples" />
     <SUITE FILE_PATH="coverage/GoalInferenceGAN$evaluate_model.coverage" NAME="evaluate_model Coverage Results" MODIFIED="1559600789054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../sgan/" />
   </component>
   <component name="debuggerHistoryManager">
@@ -609,292 +383,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/samples/datasets/ewap_dataset_full/ewap_dataset/README.txt" />
-    <entry file="file://$PROJECT_DIR$/samples/datasets/ewap_dataset_full/ewap_dataset/seq_eth/H.txt" />
-    <entry file="file://$PROJECT_DIR$/samples/datasets/ewap_dataset_full/ewap_dataset/seq_eth/obsmat.txt" />
-    <entry file="file://$PROJECT_DIR$/samples/datasets/ewap_dataset_full/ewap_dataset/seq_eth/groups.txt" />
-    <entry file="file://$PROJECT_DIR$/samples/datasets/ewap_dataset_full/ewap_dataset/seq_eth/map.png" />
-    <entry file="file://$PROJECT_DIR$/samples/datasets/ewap_dataset_full/ewap_dataset/seq_eth/info.txt" />
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/pgmpy/factors/continuous/ContinuousFactor.py" />
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/scipy/stats/_continuous_distns.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_import_hook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/networkx/classes/digraph.py" />
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/pgmpy/independencies/Independencies.py" />
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/pgmpy/models/BayesianModel.py" />
-    <entry file="file://$PROJECT_DIR$/practice/pgmpy_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#47#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py" />
-    <entry file="file:///usr/lib/python3/dist-packages/networkx/__init__.py" />
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/networkx/drawing/nx_pylab.py" />
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/pgmpy/base/DirectedGraph.py" />
-    <entry file="file://$PROJECT_DIR$/gigan/utils/data_load.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/tests/pytorch_tutorials.py" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/models/sgan-models/eth_12_model.pt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/models/sgan-models/eth_8_model.pt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/sgan/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/datasets/eth/val/biwi_hotel_val.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/datasets/eth/test/biwi_eth.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80610">
-          <caret line="71" column="19" lean-forward="true" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/torch/utils/data/dataloader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="178" column="36" selection-start-line="178" selection-start-column="36" selection-end-line="178" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/sgan/data/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/scripts/evaluate_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-698">
-          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/networkx/classes/reportviews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="177" selection-start-line="177" selection-end-line="177" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/sgan/data/trajectories.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="100" column="11" selection-start-line="100" selection-start-column="11" selection-end-line="100" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/torch/serialization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/scipy/stats/_distn_infrastructure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13290">
-          <caret line="919" column="43" selection-start-line="919" selection-start-column="43" selection-end-line="919" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/torch/nn/modules/rnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/torch/__init__.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="1099" column="45" lean-forward="true" selection-start-line="1099" selection-start-column="45" selection-end-line="1099" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="488" selection-start-line="488" selection-end-line="488" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_vars.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="231" selection-start-line="231" selection-end-line="231" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/torch/cuda/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="171" column="25" lean-forward="true" selection-start-line="171" selection-start-column="25" selection-end-line="171" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sgan/sgan/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7560">
-          <caret line="505" selection-start-line="505" selection-end-line="505" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gigan/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-          <folding>
-            <element signature="e#24#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gigan/extensions/pgmpy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gigan/extensions/sgan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="114" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../IntentionInference/GoalInference/rrtStarPlanner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../IntentionInference/GoalInference/rrtPlanner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="180" column="24" lean-forward="true" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../IntentionInference/GoalInference/goalInference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../IntentionInference/GoalInference/obstacleMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gigan/visualization/video.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="88" column="25" lean-forward="true" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gigan/utils/geometry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/gigan_cusumano_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="181" column="83" selection-start-line="181" selection-start-column="83" selection-end-line="181" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
