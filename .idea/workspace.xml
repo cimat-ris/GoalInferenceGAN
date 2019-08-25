@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cbf8d6-ca4b-4205-8052-f55c8d85dedb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/install_dataset.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/install_repositories.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/samples/gigan_cusumano_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/samples/gigan_cusumano_model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -272,7 +271,9 @@
       <workItem from="1565108586637" duration="2130000" />
       <workItem from="1566162514126" duration="22000" />
       <workItem from="1566162595452" duration="759000" />
-      <workItem from="1566163412840" duration="4809000" />
+      <workItem from="1566163412840" duration="7167000" />
+      <workItem from="1566524560075" duration="2562000" />
+      <workItem from="1566747894667" duration="9827000" />
     </task>
     <task id="LOCAL-00001" summary="Stubs for python package design. Mostly boilerplate, still figuring out how best to best import SGAN.">
       <created>1555396112618</created>
